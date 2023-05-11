@@ -1,46 +1,52 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class Rocket : MonoBehaviour
 {
-    public GameObject[] fuelBarrels;
+    public int requiredFuelBarrels = 3; // Number of fuel barrels required to launch the rocket.
+    public XRController buttonController; // The controller used to initiate the rocket launch sequence.
+    public float launchDelay = 3f; // Delay before launching the rocket.
 
-    private bool hasAllFuel = false;
+    private int currentFuelBarrelCount = 0; // Counter for collected fuel barrels.
+    private bool isLaunching = false; // Whether the rocket is currently launching.
+
+    private void OnEnable()
+    {
+        buttonController.inputDevice.SelectPress.AddListener(OnLaunchButtonPressed);
+    }
+
+    private void OnDisable()
+    {
+        buttonController.inputDevice.SelectPress.RemoveListener(OnLaunchButtonPressed);
+    }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.CompareTag("FuelBarrel"))
         {
-            // Check if player has all fuel barrels
-            Inventory inventory = other.gameObject.GetComponent<Inventory>();
-            if (inventory.fuelCount >= fuelBarrels.Length)
-            {
-                hasAllFuel = true;
-            }
-
-            // Show message based on whether player has all fuel barrels
-            if (hasAllFuel)
-            {
-                Debug.Log("You have enough fuel to launch the rocket!");
-            }
-            else
-            {
-                Debug.Log("You need to collect all the fuel barrels first.");
-            }
+            currentFuelBarrelCount++;
+            other.gameObject.SetActive(false); // Disable the collected fuel barrel.
+            // Add any other code you need to perform when a fuel barrel is collected.
         }
     }
 
-    public void LaunchRocket()
+    private void OnLaunchButtonPressed(XRBaseController controller)
     {
-        if (hasAllFuel)
+        if (currentFuelBarrelCount >= requiredFuelBarrels && !isLaunching)
         {
-            SceneManager.LoadScene("WinScene");
+            StartCoroutine(LaunchRocketSequence());
         }
-        else
-        {
-            Debug.Log("You need to collect all the fuel barrels first.");
-        }
+    }
+
+    private IEnumerator LaunchRocketSequence()
+    {
+        isLaunching = true;
+        // Add any other code you need to perform before launching the rocket, such as playing an animation or sound effect.
+        yield return new WaitForSeconds(launchDelay);
+        // Code to launch the rocket, such as starting a particle effect or changing the scene.
+        Debug.Log("Rocket launched!");
+        // Add any other code you need to perform after launching the rocket.
     }
 }
