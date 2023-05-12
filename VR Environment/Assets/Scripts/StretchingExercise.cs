@@ -5,6 +5,7 @@ public class StretchingExercise : MonoBehaviour
 {
     public GameObject stretchingCanvas;
     public GameObject secondExerciseCanvas;
+    public GameObject thirdExerciseCanvas;
     public TMP_Text feedbackText;
 
     private bool exerciseInProgress = false;
@@ -14,6 +15,7 @@ public class StretchingExercise : MonoBehaviour
     {
         stretchingCanvas.SetActive(true);
         secondExerciseCanvas.SetActive(false);
+        thirdExerciseCanvas.SetActive(false);
         feedbackText.text = "Stretch your arms above your head, and press the A button to start the exercise";
     }
 
