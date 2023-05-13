@@ -8,18 +8,20 @@ public class Rocket : MonoBehaviour
     public int requiredFuelBarrels = 3; // Number of fuel barrels required to launch the rocket.
     public XRController buttonController; // The controller used to initiate the rocket launch sequence.
     public float launchDelay = 3f; // Delay before launching the rocket.
+    public InputHelpers.Button button = InputHelpers.Button.None;
 
     private int currentFuelBarrelCount = 0; // Counter for collected fuel barrels.
     private bool isLaunching = false; // Whether the rocket is currently launching.
 
     private void OnEnable()
     {
-        buttonController.inputDevice.SelectPress.AddListener(OnLaunchButtonPressed);
-    }
+        bool pressed;
+        buttonController.inputDevice.IsPressed(button, out pressed);
 
-    private void OnDisable()
-    {
-        buttonController.inputDevice.SelectPress.RemoveListener(OnLaunchButtonPressed);
+        if (pressed)
+        {
+            OnLaunchButtonPressed(buttonController);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
