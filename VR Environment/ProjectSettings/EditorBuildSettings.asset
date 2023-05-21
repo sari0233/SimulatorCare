@@ -8,6 +8,12 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/Rowing.unity
+    guid: cd8ccf956de0af44cb935ccaded1ea44
+  - enabled: 1
+    path: Assets/Scenes/Hub.unity
+    guid: 197f85b08efa5a943b22330491ba0676
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 398d945149746a94899cafbfeddf8c9f,
       type: 2}

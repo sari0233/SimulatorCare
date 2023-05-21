@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Pin
   - Ball
+  - Pier
   layers:
   - Default
   - TransparentFX
