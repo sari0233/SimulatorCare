@@ -1435,6 +1435,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -4.004
       objectReference: {fileID: 0}
+    - target: {fileID: 6470914648387029666, guid: d9470993b9bd0a541a884d6f6704a421,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 9122268254347983895, guid: d9470993b9bd0a541a884d6f6704a421,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -1544,7 +1549,6 @@ MonoBehaviour:
   _data:
     centre: {x: 0, y: 0, z: 0}
   _relativeTo: {fileID: 448341186}
-  _referencePoint: {fileID: 410995178}
 --- !u!114 &410995180
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1557,8 +1561,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 622db80eec0bd344f920b1aa056ae8d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _relativeTo: {fileID: 448341186}
   _surface: {fileID: 410995179}
+  _relativeTo: {fileID: 448341186}
   _usesHandPose: 1
   _handPose:
     _handedness: 1
@@ -1698,6 +1702,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _activeState: {fileID: 0}
   _interactableFilters: []
+  _candidateTiebreaker: {fileID: 0}
   _maxIterationsPerFrame: 3
   _data: {fileID: 0}
   _pointableElement: {fileID: 448341184}
@@ -1810,7 +1815,6 @@ MonoBehaviour:
   _data:
     centre: {x: 0, y: 0, z: 0}
   _relativeTo: {fileID: 448341186}
-  _referencePoint: {fileID: 1223814572}
 --- !u!114 &457094825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1823,8 +1827,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 622db80eec0bd344f920b1aa056ae8d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _relativeTo: {fileID: 448341186}
   _surface: {fileID: 457094824}
+  _relativeTo: {fileID: 448341186}
   _usesHandPose: 1
   _handPose:
     _handedness: 1
@@ -1902,7 +1906,6 @@ MonoBehaviour:
   _data:
     centre: {x: 0, y: 0, z: 0}
   _relativeTo: {fileID: 448341186}
-  _referencePoint: {fileID: 515718224}
 --- !u!114 &515718226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1915,8 +1918,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 622db80eec0bd344f920b1aa056ae8d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _relativeTo: {fileID: 448341186}
   _surface: {fileID: 515718225}
+  _relativeTo: {fileID: 448341186}
   _usesHandPose: 1
   _handPose:
     _handedness: 0
@@ -4199,7 +4202,6 @@ MonoBehaviour:
   _data:
     centre: {x: 0, y: 0, z: 0}
   _relativeTo: {fileID: 448341186}
-  _referencePoint: {fileID: 863616934}
 --- !u!114 &931337648
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4212,8 +4214,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 622db80eec0bd344f920b1aa056ae8d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _relativeTo: {fileID: 448341186}
   _surface: {fileID: 931337647}
+  _relativeTo: {fileID: 448341186}
   _usesHandPose: 1
   _handPose:
     _handedness: 0
@@ -6006,6 +6008,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OVRCameraRig
       objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -7479,8 +7485,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _renderer: {fileID: 2096042558}
   _customIcon: {fileID: 0}
-  _colliders:
-  - {fileID: 2096042557}
   _snappiness: 0.8
 --- !u!114 &1582772875
 MonoBehaviour:
@@ -8999,7 +9003,6 @@ MonoBehaviour:
   _data:
     centre: {x: 0, y: 0, z: 0}
   _relativeTo: {fileID: 448341186}
-  _referencePoint: {fileID: 1884824249}
 --- !u!114 &1884824251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9012,8 +9015,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 622db80eec0bd344f920b1aa056ae8d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _relativeTo: {fileID: 448341186}
   _surface: {fileID: 1884824250}
+  _relativeTo: {fileID: 448341186}
   _usesHandPose: 1
   _handPose:
     _handedness: 0
@@ -9247,7 +9250,6 @@ MonoBehaviour:
   _data:
     centre: {x: 0, y: 0, z: 0}
   _relativeTo: {fileID: 448341186}
-  _referencePoint: {fileID: 1921569860}
 --- !u!114 &1921569862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9260,8 +9262,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 622db80eec0bd344f920b1aa056ae8d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _relativeTo: {fileID: 448341186}
   _surface: {fileID: 1921569861}
+  _relativeTo: {fileID: 448341186}
   _usesHandPose: 1
   _handPose:
     _handedness: 1

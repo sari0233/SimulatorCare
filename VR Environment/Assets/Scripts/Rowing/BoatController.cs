@@ -25,9 +25,12 @@ public class BoatController : MonoBehaviour
             Vector3 rightHandDirection = OVRInput.GetLocalControllerVelocity(OVRInput.Controller.RTouch);
             Vector3 localVelocity = leftHandDirection + rightHandDirection;
             localVelocity *= -1f;
-            if (localVelocity.sqrMagnitude > deadZone * deadZone)
+
+            float forwardSpeed = Mathf.Max(localVelocity.z - deadZone, 0f); // Filter out backward movement
+
+            if (forwardSpeed > 0f)
             {
-                AddPaddleForce(localVelocity);
+                AddPaddleForce(localVelocity.normalized * forwardSpeed);
             }
         }
         ApplyResistanceForce();
