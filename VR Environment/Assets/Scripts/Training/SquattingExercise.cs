@@ -10,6 +10,7 @@ public class SquattingExercise : MonoBehaviour
     private float timer;
     private bool exerciseStarted;
     public Animator chestAnimator;
+    public GameObject key;
 
     // Update is called once per frame
     void Update()
@@ -51,6 +52,7 @@ public class SquattingExercise : MonoBehaviour
         {
             messageText.SetText("Exercise complete");
             chestAnimator.SetBool("Open", true);
+            key.SetActive(true);
             yield return new WaitForSeconds(2.0f);
         }
         else

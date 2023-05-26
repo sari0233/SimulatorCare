@@ -1030,6 +1030,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   messageText: {fileID: 887800907}
   chestAnimator: {fileID: 2068238845}
+  key: {fileID: 448341182}
 --- !u!4 &315512732 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3162044330543675398, guid: e9dd25fe255d0dd4c9bb05c4e208bbf9,
@@ -5567,6 +5568,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentCanvas: {fileID: 1272406658}
   firstExerciseCanvas: {fileID: 551510104}
+  key: {fileID: 448341182}
 --- !u!1001 &1274467450
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9912,7 +9914,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7fb7d92b75a939a4cad4df798b6dd591, type: 2}
+  - {fileID: 5716412859965125902, guid: fc751fc4bdca641928760e291a3596ae, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

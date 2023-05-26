@@ -4,11 +4,13 @@ public class CanvasInputListener : MonoBehaviour
 {
     public GameObject currentCanvas;
     public GameObject firstExerciseCanvas;
+    public GameObject key;
 
     void Start()
     {
         currentCanvas.SetActive(true);
         firstExerciseCanvas.SetActive(false);
+        key.SetActive(false);
     }
 
     void Update()
