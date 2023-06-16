@@ -9,6 +9,9 @@ TagManager:
   - Pier
   - Island
   - Controller
+  - Portal
+  - Boat
+  - TrainingPortal
   layers:
   - Default
   - TransparentFX

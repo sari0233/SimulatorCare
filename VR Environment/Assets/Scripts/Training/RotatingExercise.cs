@@ -6,6 +6,7 @@ public class RotatingExercise : MonoBehaviour
 {
     public GameObject nextCanvas;
     public TextMeshProUGUI feedbackText;
+    public AudioSource exerciseCompleteAudio;
 
     private bool exerciseStarted;
     private float timer;
@@ -55,6 +56,7 @@ public class RotatingExercise : MonoBehaviour
         if (timer >= exerciseDuration && handAngle >= rotationThreshold)
         {
             feedbackText.SetText("Exercise complete");
+            exerciseCompleteAudio.Play();
             yield return new WaitForSeconds(2.0f);
             nextCanvas.SetActive(true);
             gameObject.SetActive(false);

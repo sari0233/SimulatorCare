@@ -5,6 +5,7 @@ using UnityEngine;
 public class SquattingExercise : MonoBehaviour
 {
     public TextMeshProUGUI messageText;
+    public AudioSource exerciseCompleteAudio;
 
     private float exerciseDuration = 5.0f;
     private float timer;
@@ -51,6 +52,7 @@ public class SquattingExercise : MonoBehaviour
         if (timer >= exerciseDuration && (leftHand < 5f && rightHand < 5f))
         {
             messageText.SetText("Exercise complete");
+            exerciseCompleteAudio.Play();
             chestAnimator.SetBool("Open", true);
             key.SetActive(true);
             yield return new WaitForSeconds(2.0f);

@@ -7,6 +7,7 @@ public class StretchingExercise : MonoBehaviour
     public GameObject secondExerciseCanvas;
     public GameObject thirdExerciseCanvas;
     public TMP_Text feedbackText;
+    public AudioSource exerciseCompleteAudio;
 
     private bool exerciseInProgress = false;
     private float exerciseTimer = 0f;
@@ -49,14 +50,15 @@ public class StretchingExercise : MonoBehaviour
 
         float armHeight = GetArmHeight();
 
-        if (armHeight >= 0.8f)
+        if (armHeight >= 0.5f)
         {
-            feedbackText.text = "Exercise completed, well done!";;
+            feedbackText.text = "Exercise completed, well done!";
+            exerciseCompleteAudio.Play();
             Invoke("SwitchToSecondExerciseCanvas", 2.0f);
         }
         else
         {
-            feedbackText.text = "Stretch your arms a bit higher!";
+            feedbackText.text = "You have to stretch your arms a bit higher! Press the A button to try again!";
         }
     }
 
