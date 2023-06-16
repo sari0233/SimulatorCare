@@ -6,7 +6,12 @@ TagManager:
   tags:
   - Pin
   - Ball
-  - Ground
+  - Pier
+  - Island
+  - Controller
+  - Portal
+  - Boat
+  - TrainingPortal
   layers:
   - Default
   - TransparentFX

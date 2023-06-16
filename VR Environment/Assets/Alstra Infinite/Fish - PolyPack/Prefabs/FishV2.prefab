@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6283263626917782543}
   - component: {fileID: 8130780406338408645}
   - component: {fileID: 6666653571930346421}
-  - component: {fileID: 6159999741769372575}
+  - component: {fileID: 5746684345279226390}
   m_Layer: 0
   m_Name: FishV2
   m_TagString: Untagged
@@ -99,7 +99,7 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 3100006622114138374, guid: a8fd0d08c30426d4c978a4998752cf7d, type: 3}
---- !u!114 &6159999741769372575
+--- !u!114 &5746684345279226390
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -108,7 +108,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7770584863604633872}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 862f249ee7e54da4bbdad9d6a9261d43, type: 3}
+  m_Script: {fileID: 11500000, guid: 4c64637e4f19fd64391a41ac0e758de4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _FOVAngle: 270
