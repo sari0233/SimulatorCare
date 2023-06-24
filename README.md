@@ -26,7 +26,7 @@ To experience SimulatorCare, follow these steps:
 
 1. Clone the GitHub repository to your local machine using the following command:
    ```
-   git clone https://github.com/sari0233/ms-project.git
+   git clone https://github.com/sari0233/SimulatorCare.git
    ```
 
 2. Open the project in your preferred VR development environment (e.g., Unity).
